@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_overlay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:layout_marginHorizontal="6dp"
+    android:clickable="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:id="@+id/data_card"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="7dp"
+        android:orientation="vertical"
+        android:background="@drawable/overlay_card_bg"
+        android:elevation="8dp"
+        android:layout_height="wrap_content">
+
+    <!-- Floating Card -->
+    <LinearLayout
+        android:id="@+id/floating_overlay_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/overlay_card_bg"
+        android:elevation="8dp">
+        <!-- Header Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/gradient_green_header"
+            android:gravity="center"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="6dp"
+            >
+
+            <TextView
+                android:id="@+id/tvHeader"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="GL Funnel"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivClose"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/ic_close_white"
+                android:contentDescription="Close"
+                android:padding="2dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:paddingHorizontal="10dp"
+            android:gravity="center_vertical"
+            android:paddingVertical="10dp"
+            android:layout_height="wrap_content">
+
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:orientation="vertical"
+             android:layout_weight="1"
+             android:layout_height="wrap_content">
+             <!-- Info Section -->
+             <TextView
+                 android:id="@+id/tvName"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="John Doe"
+                 android:textFontWeight="800"
+                 android:textColor="@android:color/black"
+                 android:textSize="18sp" />
+
+             <TextView
+                 android:visibility="gone"
+                 android:id="@+id/tvProject"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Project: Sunset Villas"
+                 android:textColor="@android:color/black"
+                 android:textSize="14sp"
+                 android:paddingTop="4dp" />
+         </LinearLayout>
+
+
+
+            <!-- Status Section -->
+            <LinearLayout
+                android:layout_marginEnd="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tvFreshness"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🌱"
+                        android:textColor="@android:color/black"
+                        android:textSize="30sp" />
+                    <TextView
+                        android:id="@+id/tvType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fresh"
+                        android:textColor="@android:color/black"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_height="match_parent">
+                   <LinearLayout
+                       android:layout_weight="1"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content">
+                       <TextView
+                           android:id="@+id/dayCount"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="0"
+                           android:layout_marginEnd="1dp"
+                           android:textFontWeight="600"
+                           android:textColor="@android:color/holo_blue_dark"
+                           android:textSize="27sp" />
+                       <TextView
+                           android:id="@+id/dayText"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Day"
+                           android:textColor="@android:color/black"
+                           android:textFontWeight="300"
+                           android:textSize="18sp" />
+                   </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/lastAct"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Last Act"
+                        android:textColor="@android:color/black"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/nA"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="NA"
+                        android:textFontWeight="700"
+                        android:textColor="@android:color/black"
+                        android:textSize="27sp" />
+                    <TextView
+                        android:id="@+id/type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Type"
+                        android:textColor="@android:color/black"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginVertical="8dp" />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_marginHorizontal="10dp"
+    android:paddingBottom="40dp"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/notes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Note: "
+        android:textFontWeight="800"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+    <!-- Note -->
+    <TextView
+        android:id="@+id/tvNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="--No Data--"
+        android:textColor="@android:color/black"
+        android:textSize="13sp"/>
+</LinearLayout>
+
+
+
+    </LinearLayout>
+        <!-- ProgressBar below header -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Small"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:progress="50"
+            android:max="100"
+            android:visibility="gone"
+            android:progressTint="@android:color/holo_green_dark"
+            android:indeterminate="false" />
+
+    </LinearLayout>
+
+
+</FrameLayout>
